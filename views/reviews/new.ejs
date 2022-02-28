@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Review of <%= campground.title %> </h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds/<%=campground._id%>/review" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="rating">Rating</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="rating-label">$</span>
+                        <input type="text" class="form-control" id="rating" placeholder="0.00" aria-label="rating"
+                            aria-describedby="rating-label" name="review[rating]" required />
+                    </div>
+                    <div class="valid-feedback">OK!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="body">Review</label>
+                    <textarea class="form-control" type="text" id="body" name="review[body]"
+                        required></textarea>
+                    <div class="valid-feedback">OK!</div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Confirm review</button>
+                </div>
+            </form>
+            <a href="/campgrounds/<%=campground._id%>">Cancel</a>
+        </div>
+    </div>
+

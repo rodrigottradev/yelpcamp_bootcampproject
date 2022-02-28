@@ -1,0 +1,11 @@
+//PATRÓN DE COLORES
+$maincolor: #962c74;
+
+//MODIFICANDO VARIABLES DE BOOTSTRAP
+$primary: $maincolor;
+$enable-shadows: true;
+$enable-gradients: true;
+
+// $enable-shadows: true;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
